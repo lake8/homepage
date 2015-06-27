@@ -6,15 +6,37 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute',
+    'ui.router',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
+
+  .config(function ($urlRouterProvider, $locationProvider, $stateProvider) {
+    $urlRouterProvider
+      .otherwise('/');
+    //$locationProvider.html5Mode(true);
+
+    $stateProvider
+      .state('main', {
+        url: '/',
+        views : {
+          'root' : {
+            templateUrl: 'views/main.html',
+          }
+        }
       })
-      .otherwise({
-        redirectTo: '/'
+
+      .state('question', {
+        url: '/questions/:slug',
+        views : {
+          'root' : {
+            templateUrl: 'views/question.html',
+          }
+        }
       });
-  });
+  })
+
+
+
+
+   .run(function($rootScope, $state) {});
+

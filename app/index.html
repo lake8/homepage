@@ -1,6 +1,7 @@
   <!doctype html>
 <html>
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular with Bootstrap project</title>
@@ -14,7 +15,7 @@
   <body ng-app="app" class="app">
 
 
-    <div class="app__container" ng-view=""></div>
+    <div class="app__container" ui-view="root"></div>
 
     <!-- build:js js/scripts.min.js -->
     <!-- bower:js -->
@@ -23,7 +24,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <script src="scripts/components/o8search/o8search.js"></script>
