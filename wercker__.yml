@@ -1,0 +1,14 @@
+box: wercker/default
+build:    
+  steps:
+    - script:
+        name: noop
+        code: echo "No Operation"
+deploy:
+  steps:
+    - wercker/s3sync@1.2.0:
+        key-id: $AWSAccessKeyId
+        key-secret: $AWSSecretKey
+        bucket-url: s3://ocean8.co/
+        source-dir: ""
+        opts: --acl-public
