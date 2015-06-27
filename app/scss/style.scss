@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 @import "bootstrap";
+@import "theme";
 
 // bootstrap angular ui must have
 .nav,
@@ -8,6 +9,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 .carousel,
 .panel-title a {
     cursor: pointer;
+}
+
+
+body {
+  background: $darker;
 }
 
 

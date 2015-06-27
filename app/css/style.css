@@ -4808,8 +4808,14 @@ button.close {
     display: none !important; }
  }
 
+.btn-success {
+  background: #005b79; }
+
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer; }
+
+body {
+  background: #0c2e40; }
 
 .search {
   display: table;
