@@ -4810,3 +4810,12 @@ button.close {
 
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer; }
+
+.search {
+  display: table;
+  width: 100%; }
+  .search__form {
+    vertical-align: middle;
+    display: table-cell; }
+  .search__text {
+    width: 100%; }
