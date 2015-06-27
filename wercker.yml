@@ -8,11 +8,17 @@ build:
     - script:
         name: build with grunt
         code: grunt publish
+    - script:
+        name: list dir
+        code: ls
 deploy:
   steps:
+    - script:
+        name: list dir
+        code: ls
     - wercker/s3sync@1.2.0:
         key-id: $AWSAccessKeyId
         key-secret: $AWSSecretKey
         bucket-url: s3://ocean8.co/
-        source-dir: "$WERCKER_OUTPUT_DIR"
+        source-dir: "dist"
         opts: --acl-public

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     app: 'app',
-    dist: process.env.WERCKER_OUTPUT_DIR || 'dist',
+    dist: 'dist',
 
     sass: {
       dist: {
