@@ -31,14 +31,9 @@ build:
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
-    - script:
-        name: bower-install
-        code: |
-          bower install
-    - script:
-        name: grunt build
-        code: |
-          grunt publish
+    - plasticine/bower-install@0.0.4
+    - wercker/grunt@1.0.0:
+        tasks: publish
 
 deploy:
   steps:
