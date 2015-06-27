@@ -2,6 +2,7 @@
 
 angular
   .module('app', [
+    'o8.search',
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -12,11 +13,6 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/signup', {
-        templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl'
       })
       .otherwise({
         redirectTo: '/'

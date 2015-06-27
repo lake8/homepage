@@ -2,12 +2,13 @@
 <div class="search">
 
   <h1 class="search__brand brand brand--big">Ocean8</h1>
-  <form class="search__form" role="form" name="search">
-     <div class="search__text input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
-        <span class="input-group-btn">
-          <button class="btn btn-success" type="button">Go!</button>
-        </span>
-      </div>
+  <form o-search class="search__form" role="form" name="search" ng-submit="submit(searchText)">
+    <div class="search__text input-group">
+      <input type="text" class="form-control input-lg" placeholder="Ask something..." ng-model="searchText">
+      <span class="input-group-btn">
+        <button class="btn btn-lg btn-success glyphicon glyphicon-search" type="submit"></button>
+      </span>
+    </div>
   </form>
+
 </div>

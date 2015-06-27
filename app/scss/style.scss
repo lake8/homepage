@@ -1,23 +1,21 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-@import "bootstrap";
+
+
+
 @import "theme";
 
-// bootstrap angular ui must have
-.nav,
-.pagination,
-.carousel,
-.panel-title a {
-    cursor: pointer;
+
+
+* {
+  font-family: $font-family-base;
 }
 
 html, body {
   height: 100%;
 }
 
-body {
-  background: $darker;
-}
+
 
 
 .app {
@@ -32,9 +30,8 @@ body {
 .brand {
   width : 100%;
   text-align: center;
-  color: $text-light;
   height: 211px;
-  background: url(/images/logo.png) no-repeat;
+  background: url(/images/logo_invert.png) no-repeat;
   background-size: contain;
   background-position: center;
   text-indent: -9999px;
