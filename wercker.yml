@@ -11,6 +11,8 @@ build:
           start-stop-daemon --start --quiet --pidfile /tmp/xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
           # Give xvfb time to start. 3 seconds is the default for all xvfb-run commands.
           # sleep 3
+    - install-packages:
+        packages: chrome
     - script:
         name: update webdriver
         code: ./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update
@@ -18,6 +20,7 @@ build:
         name: install front end dependencies via bower
         code: bower install
     - script:
+
         name: build and e2e test with grunt
         code: npm test
 deploy:
