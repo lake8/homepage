@@ -83,6 +83,10 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      protractor: {
+        files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+        tasks: ['protractor:continuous']
       }
     },
 
@@ -102,6 +106,16 @@ module.exports = function(grunt) {
           base: '<%= dist %>/',
           open: true,
           keepalive: true,
+          livereload: false,
+          hostname: '127.0.0.1'
+        }
+      },
+      test: {
+        options: {
+          port: 8888,
+          base: '<%= dist %>/',
+          open: false,
+          keepalive: false,
           livereload: false,
           hostname: '127.0.0.1'
         }
@@ -129,11 +143,31 @@ module.exports = function(grunt) {
           'bootstrap.js'
         ]
       }
-    }
+    },
+
+    protractor: {
+      options: {
+        configFile: 'e2e.conf.js', // Default config file
+        keepAlive: false, // If false, the grunt process stops when the test fails.
+        noColor: false, // If true, protractor will not use colors in its output.
+        args: {}
+      },
+      singlerun: {
+        options: {
+          keepAlive: false
+        }
+      },
+      continuous: {
+        options: {
+          keepAlive: true
+        }
+      }
+    },
 
   });
 
   grunt.registerTask('compile-sass', ['sass']);
+  grunt.registerTask('test', ['publish', 'connect:test', 'protractor:singlerun']);
   grunt.registerTask('bower-install', ['wiredep']);
   grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
   grunt.registerTask('validate-js', ['jshint']);
