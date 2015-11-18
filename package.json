@@ -29,7 +29,6 @@
     "node-sass": "~1.0.3"
   },
   "scripts" : {
-    "test" : "exit 0",
-    //"postinstall" : "./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
+    "test" : "exit 0"
   }
 }
