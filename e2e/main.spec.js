@@ -4,16 +4,22 @@ describe('Homepage', function() {
   var page = new MainPage();
   page.get();
 
-  xit('should display title', function() {
+  it('should display title', function() {
+    expect(browser.getTitle()).toEqual('Ocean8');
+  });
+
+  it('should display brand name', function() {
     expect(page.brand.getText()).toEqual('Ocean8');
   });
 
-  xit('should display search input with placeholder', function() {
-    expect(page.searchInput.getAttribute('placeholder')).toEqual('Ask something...');
+  it('should display a submit button', function() {
+    expect(page.email.getAttribute('type')).toEqual('email');
+    expect(page.email.getAttribute('name')).toEqual('EMAIL');
   });
 
-  xit('should display search button with search icon class', function() {
-    expect(page.searchButton.getAttribute('class')).toContain('glyphicon-search');
+  it('should display a submit button', function() {
+    expect(page.btn.getAttribute('value')).toEqual('sign up');
+    expect(page.btn.getAttribute('type')).toEqual('submit');
   });
 
 });

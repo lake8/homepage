@@ -4836,7 +4836,7 @@ html, body {
     top: 50%;
     left: 0px;
     margin: 0px;
-    margin-top: -230px; }
+    margin-top: -255px; }
   .search__form {
     vertical-align: middle;
     display: table-cell; }
@@ -4844,3 +4844,6 @@ html, body {
     width: 100%;
     margin: 0 auto;
     max-width: 500px; }
+
+#mc-embedded-subscribe-form .btn {
+  margin-top: 10px; }
