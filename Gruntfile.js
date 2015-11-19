@@ -84,10 +84,10 @@ module.exports = function(grunt) {
           livereload: true
         }
       },
-      protractor: {
-        files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
-        tasks: ['protractor:continuous']
-      }
+      // protractor: {
+      //   files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+      //   tasks: ['protractor:continuous']
+      // }
     },
 
     connect: {
