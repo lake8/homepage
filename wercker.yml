@@ -5,9 +5,10 @@ build:
     - script:
         name: install front end dependencies via bower
         code: bower install
+
     - script:
-        name: build and tets
-        code: grunt test
+        name: build
+        code: grunt publish
 deploy:
   steps:
     - script:
