@@ -7,8 +7,8 @@ build:
         code: bower install
 
     - script:
-        name: build
-        code: grunt publish
+        name: build and test
+        code: grunt test
 deploy:
   steps:
     - script:

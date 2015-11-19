@@ -21,7 +21,7 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "~0.6.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-protractor-runner": "^2.0.0",
+    "grunt-protractor-runner": "^1.0.0",
     "grunt-sass": "~0.16.0",
     "grunt-usemin": "~2.5.0",
     "grunt-wiredep": "~1.9.0",
