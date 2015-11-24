@@ -14,7 +14,7 @@ angular
   .config(function ($urlRouterProvider, $locationProvider, $stateProvider) {
     $urlRouterProvider
       .otherwise('/');
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
 
     $stateProvider
       .state('main', {
