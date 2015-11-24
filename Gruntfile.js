@@ -81,7 +81,7 @@ module.exports = function(grunt) {
       livereload: {
         files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
         options: {
-          livereload: true
+          livereload: 35728
         }
       },
       protractor: {
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
           port: 8888,
           base: '<%= app %>/',
           open: true,
-          livereload: true,
+          livereload: 35728,
           hostname: '127.0.0.1'
         }
       },

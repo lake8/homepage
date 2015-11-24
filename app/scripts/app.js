@@ -3,6 +3,7 @@
 angular
   .module('app', [
     'o8.search',
+    'o8.signup',
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -13,7 +14,7 @@ angular
   .config(function ($urlRouterProvider, $locationProvider, $stateProvider) {
     $urlRouterProvider
       .otherwise('/');
-    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
     $stateProvider
       .state('main', {
@@ -25,11 +26,11 @@ angular
         }
       })
 
-      .state('question', {
-        url: '/questions/:slug',
+      .state('signup', {
+        url: '/signup',
         views : {
           'root' : {
-            templateUrl: 'views/question.html',
+            templateUrl: 'views/signup.html',
           }
         }
       });
@@ -38,5 +39,9 @@ angular
 
 
 
-   .run(function($rootScope, $state) {});
+   .run(function($rootScope, $state) {
+
+
+
+   });
 
