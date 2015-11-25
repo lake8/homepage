@@ -33,7 +33,26 @@ angular
             templateUrl: 'views/signup.html',
           }
         }
-      });
+      })
+
+      .state('tcs', {
+        url: '/tcs',
+        views : {
+          'root' : {
+            templateUrl: 'views/tcs.html',
+          }
+        }
+      })
+
+
+      .state('privacy', {
+        url: '/privacy',
+        views : {
+          'root' : {
+            templateUrl: 'views/privacy.html',
+          }
+        }
+      })
   })
 
 
