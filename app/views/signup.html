@@ -57,6 +57,7 @@
         id="password"
         name="password"
         ng-minlength="6"
+        ng-maxlength="50"
         ng-pattern="/^(?=.*\d)(?=.*[a-zA-Z]).*$/"
         ng-model="user.password"
         required>
@@ -64,6 +65,7 @@
 	  <ul class="help-block" ng-show="(signupForm.password.$dirty || signupForm.password.$touched) && signupForm.password.$invalid">
 	    <li ng-show="signupForm.password.$error.required">Please enter a password</li>
 	    <li ng-show="signupForm.password.$error.minlength">Please enter minimum 6 characters.</li>
+      <li ng-show="signupForm.password.$error.minlength">Please enter maximum 50 characters.</li>
       <li ng-show="signupForm.password.$error.pattern">Please enter password that contains letters and numbers.</li>
 	  </ul>
 	</div>

@@ -1,4 +1,4 @@
-describe('Homepage', function() {
+xdescribe('Homepage', function() {
 
   var MainPage = require('./main.po.js');
   var page = new MainPage();
