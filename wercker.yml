@@ -14,8 +14,8 @@ deploy:
         name: list dir
         code: ls
     - wercker/s3sync@1.2.0:
-        key-id: $AWSAccessKeyId
-        key-secret: $AWSSecretKey
+        key-id: $AWS_ACCESS_KEY_ID
+        key-secret: $AWS_SECRET_ACCESS_KEY
         bucket-url: s3://www.ocean8.co/
         source-dir: "dist"
         opts: --acl-public
