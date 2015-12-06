@@ -30,8 +30,6 @@
     direction : 'vertical'
 	};
 
-  console.log('>>>>>>')
-
 	/*------------------------------------------------*/
 	/*  Credit: Eike Send for the awesome swipe event */
 	/*------------------------------------------------*/
