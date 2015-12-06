@@ -1,18 +1,11 @@
 box: olger/box-yeoman@0.5.5
 build:
   steps:
-    - npm-install
     - script:
-        name: install front end dependencies via bower
-        code: bower install
-    - script:
-        name: build
-        code: grunt publish
+        name: noop
+        code: echo Noop
 deploy:
   steps:
-    - script:
-        name: list dir
-        code: ls
     - wercker/s3sync@1.2.0:
         key-id: $AWS_ACCESS_KEY_ID
         key-secret: $AWS_SECRET_ACCESS_KEY
