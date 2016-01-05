@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <h1>Reset Password</h1>
+</div>
+
+<form name="resetForm" o-reset ng-submit="submit(user)" novalidate>
+
+  <div ng-show="error" class="ng-hide alert alert-warning">{{error}}</div>
+
+  <div class="form-group" ng-class="{'has-error':resetForm.password.$invalid && resetForm.$submitted}">
+    <label for="password" class="control-label">Password</label>
+    <div>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        ng-minlength="6"
+        ng-pattern="/^(?=.*\d)(?=.*[a-zA-Z]).*$/"
+        ng-model="user.password"
+        required>
+    </div>
+    <ul class="help-block" ng-show="(resetForm.password.$dirty || resetForm.password.$touched) && resetForm.password.$invalid">
+      <li ng-show="resetForm.password.$error.required">Please enter a password</li>
+      <li ng-show="resetForm.password.$error.minlength">Please enter minimum 6 characters.</li>
+      <li ng-show="resetForm.password.$error.pattern">Please enter password that contains letters and numbers.</li>
+    </ul>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit" ng-disabled="resetForm.$invalid">Submit</button>
+  </div>
+
+<form>

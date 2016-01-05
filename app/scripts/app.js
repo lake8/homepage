@@ -35,6 +35,21 @@ angular
         }
       })
 
+      .state('reset', {
+        url: '/reset?token&id',
+        views : {
+          'root' : {
+            controller : function($scope, $stateParams) {
+              $scope.user = {
+                resetToken : $stateParams.token,
+                id: $stateParams.id
+              };
+            },
+            templateUrl: 'views/reset.html',
+          }
+        }
+      })
+
       .state('tcs', {
         url: '/tcs',
         views : {
