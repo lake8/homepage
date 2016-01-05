@@ -8,11 +8,8 @@ angular.module('o8.signup', ['o8.dev'])
     link : function(scope, el) {
 
       scope.submit = function(user) {
-
-        console.log(scope.user, user)
-
         delete scope.error;
-        $http.post('http://localhost:9000/api/users/reset-password', user)
+        $http.post('https://api.ocean8.co/api/users/reset-password', user)
         .then(function(res) {
           alert('success')
         }, function(err) {
