@@ -16,6 +16,6 @@ deploy:
     - wercker/s3sync@1.2.0:
         key-id: $AWSAccessKeyId
         key-secret: $AWSSecretKey
-        bucket-url: s3://ocean8.co/
+        bucket-url: s3://app.ocean8.co/
         source-dir: "dist"
         opts: --acl-public
